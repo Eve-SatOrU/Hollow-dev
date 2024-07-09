@@ -16,14 +16,14 @@
 ## Challenge
 
 - Challenge Name : **Challenge 1 (False Knight)**
-- Git Repository Link :https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge1
+- Git Repository Link : https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge1
 - Previw Video Link : https://drive.google.com/file/d/1buouSSzXWuhvA2uJox2pL5VQ0h8E1v9P/view?usp=sharing
 
 ## Challenge
 
 - Challenge Name : **Challenge 2 (Hornet)**
-- Git Repository Link :https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge2
-- Previw Video Link : 
+- Git Repository Link : https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge2
+- Previw Video Link : https://drive.google.com/file/d/1vCnW0jvm5kjrShiDg52rKgofQMTIozVL/view?usp=sharing
 
 
   ## Challenge
@@ -43,19 +43,19 @@
 ## Challenge
 
 - Challenge Name : **Challenge 5 (broken vessel)**
-- Git Repository Link :https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge5
+- Git Repository Link : https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge5
 - Previw Video Link : 
 
 
 ## Challenge
 
 - Challenge Name : **Challenge 6 (traitor lord)**
-- Git Repository Link :https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge6
-- Previw Video Link : 
+- Git Repository Link : https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge6
+- Previw Video Link : https://drive.google.com/file/d/18slhXIWL18HFIdQp4FEf9zgx9kNOYhYB/view?usp=sharing
 ## Challenge
 
 - Challenge Name : **Challenge 7(nightmare king grimm)**
-- Git Repository Link :https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge7
+- Git Repository Link : https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge7
 - Previw Video Link :
 - Hosted Project Link :
 
