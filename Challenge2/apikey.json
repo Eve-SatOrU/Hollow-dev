@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hornet02",
+  "private_key_id": "0cdae68861895a25cee9dfc91d82c2bdda75f467",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmkn6bF6UuAZVt\npGhY0b7wyyzTciRa0GIvN3djeoah5+MsTFGoFxDAErSN6RdKPnLo3XJmJFTDBP2B\nRFGCV+m1et9UlIcePLDjwlzALlRZONFeTTQp+2EDd1mHkx6Afs8RNRPmua5GW9Ju\ndF+EWT3CMi2215c0AAxIIZBQh4kq9gkyo8PToAzTTg4D30yhdbOv8HNgm5Kz37FN\njqihhqlp46QSc0pcuO+so7RQceXWzZ6r2y32o4XvhUgBuIE25aZTttyjiX3An/pc\nrRsg7oQa1X7SGAuEW2lma9tpTniDbeW9WV4p8kAy/7LkrGoAh7qovN2lWekDZIuD\nVBIP5H/pAgMBAAECggEADI/mwW6OlAIlkU/BWNV0p3dDKa0lhb3KcdImjFeMuMAi\nt1AIJnua1Ulz2XH3Qi+kfeBZhM9/nveM4MdUuFZF91xNZHURHZwpIPwi/5Fe5h2t\nWIXNBc+B+P9yvpE/TySBHESa/B8LwB2jqJXZMEOEr1UWcoAe1JqeUoBJgHFATH+D\nb59qEwzKSh9mZ8885aIKGGJaNsOLlDCqEUn0l1p2ulFV+kWagPB6d5Z8RXUlfuzG\neHI7kfMI0YNp01v/eDU8PjuacFJi3YyEaYMUpuSBT3fwL0ONlX4cr/qWhJYax1oL\nykQHLTZbRRWIrkEJFzq4REuNFmtxyQKX/1CjBgdKwwKBgQDaCIRtqIdSeAl8gcde\nYO9gp6+t3mcdgDxyD1IYoD35uDTodMBlli+A78KCrLmVRd9cIQCIp2kY9bPydGIi\nL93ZB4XWGr1JyvTo2GObJwOUPufvk3TdWzgEC7oqsuPRetoFVJKZkvbQcrKN54iH\nYQRy5S1IoFLI8tP+PQmkBtwypwKBgQDDk/LcHR5oa5l8Y/4m0dCWZXzmtB9b9wzR\nsp7F9chOfCYAwfOZGZDyocsBu0Puqy1TmPvYjUYkvo0t8LDKFBKGs6lJQERVUcRY\nwpj/a7sD9Qk14v+kt/RhzTM0meWSDvvFdZrzqNmWyEMbunfNX4dzOD1wtl/d0gcV\n99A58jna7wKBgGcvsLzVDXYSKSsroFciOSfdNF9s6hAkKHcymP/elnYgn6mD16o8\nMa8ryTpe1FW5A8RuOfpygGK3pboRKoBTdwLHdKenb/4Ed3PbNQiwphj6zHmtp5k7\nGn+PrUOX9gmlwpjTNa5Ix1ZPcgGGmi6304ssuwmsFoHTqlCgQnfGZ1/xAoGAcvSu\nRhTTf7rnD4dSpoyi1xO2E4CCAjM3FLaxvlfWMdOlHsLhpPazDPpucYkZx9pTnRSJ\ny2JWfViHcR5NO6oKraRCd6zPvXp/N1DCTzeKSCwqCsNvUelSOn47f8qJdo1aDVkw\nB9ISex8g2taCfnONEPtYmbyIosBFq/LqMHUg7n8CgYBjxRgAmWb8xEwDuwm1+5Z7\nZJvQlLaTj5EQ7O8C0FpQ1rhqWTXiHdzkehaS/DYA0x/eeE0uQuDiv9s4zGvM2ABF\nvPBHFG7/Q3hHiLDdKiHPDD206iPq1uh05mI3YBmNJMsnMQr6qQs20GFgVs7r6d6G\niC+T28hG/grkiX/7sSnJzg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "hollow-dev@hornet02.iam.gserviceaccount.com",
+  "client_id": "105504159704235800837",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hollow-dev%40hornet02.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

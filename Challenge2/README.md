@@ -1,7 +1,7 @@
 # Challenge Document
 
-- Team Name: **Team 1**
-- Challenge Name : **Watcher Knight**
+- Team Name: **Gotei 4**
+- Challenge Name : **Challenge 2 (Hornet)**
 
 - What is the percentage of the challenge you have completed? **100%**
 
@@ -15,11 +15,12 @@
 - Requirement 4 (100%)
 - Requirement 5 (100%)
 - Requirement 6 (100%)
+- Requirement 7 (100%)
 
-- Did you complete any bonus points? **No**
+- Did you complete any bonus points? **Yes**
 
 - What did you implement extra?
 
 ### Extra
 
-- I added an authentication system to the application.
+-nothing.
