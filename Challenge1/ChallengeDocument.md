@@ -1,7 +1,7 @@
 # Challenge Document
 
 - Team Name: **Gotei 4**
-- Challenge Name : **Challenge 1 False Knight**
+- Challenge Name : **Challenge 1 ( False Knight )**
 
 - What is the percentage of the challenge you have completed? **100%**
 
