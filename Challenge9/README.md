@@ -3,7 +3,7 @@
 - Team Name: **GOTEI -4**
 - Challenge Name : **the radiance**
 
-- What is the percentage of the challenge you have completed? **20%**
+- What is the percentage of the challenge you have completed? **30%**
 
 - What are the requirements you have implemented?
 
