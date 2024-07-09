@@ -10,10 +10,10 @@
 ### Requirements
 
 - Requirement 1 (10%)
-- Requirement 2 (30%)
-- Requirement 3 (100%)
+- Requirement 2 (35%)
+- Requirement 3 (10%)
 - Requirement 4 (10%)
-- Requirement 5 (30%)
+- Requirement 5 (40%)
 - Requirement 6 (0%)
 
 - Did you complete any bonus points? **No**
