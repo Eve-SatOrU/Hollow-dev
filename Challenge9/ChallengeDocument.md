@@ -1,7 +1,7 @@
 # Challenge Document
 
 - Team Name: **GOTEI 4**
-- Challenge Name : **the radiance**
+- Challenge Name : **Challenge 9 ( The radiance )**
 
 - What is the percentage of the challenge you have completed? **30%**
 
