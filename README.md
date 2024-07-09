@@ -2,14 +2,14 @@
 
 # Submit Document
 
-- Team Name: **Team 1**
+- Team Name: **Gotei 4**
 
-1. How many challenges did you solve in total : **3**
+1. How many challenges did you solve in total : **8**
 
 2. How many challenges did you solve in the category :
-   - Easy : **1**
-   - Medium : **1**
-   - Hard : **1**
+   - Easy : **2**
+   - Medium : **4**
+   - Hard : **2**
 
 - repeat the following section for each challenge you solved (mention only the challenges you solved)
 
@@ -17,7 +17,7 @@
 
 - Challenge Name : **Challenge 1 (False Knight)**
 - Git Repository Link : https://github.com/Team1/Challenge1
-- Previw Video Link : https://youtube.com/Team1/Challenge1
+- Previw Video Link : https://drive.google.com/file/d/1buouSSzXWuhvA2uJox2pL5VQ0h8E1v9P/view?usp=sharing
 
 ## Challenge
 
