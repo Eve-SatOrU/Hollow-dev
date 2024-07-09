@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        .row {
+            display: flex;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-tac-toe</h1>
+    <div>
+        <p id="userCont">You: <span id="user"></span></p>
+        <p id="oppCont">Opponent: <span id="opp"></span></p>
+    </div>
+    <br>
+    <p id="value">You are playing with <span id="value"></span></p>
+    <br>
+    <p id="turn">X's turn</p>
+    <div>
+        <p id="enterName">What's your name?</p>
+        <input type="text" placeholder="Name" id="name" autocomplete="off">
+    </div>
+    <button id="find">Get into a game</button>
+    <img id="loading" src="loading.gif" alt="Loading" style="display: none;">
+    <div id="bigCont" style="display: none;">
+        <div id="cont">
+            <div class="row">
+                <button id="cell1" class="cell"></button>
+                <button id="cell2" class="cell"></button>
+                <button id="cell3" class="cell"></button>
+            </div>
+            <div class="row">
+                <button id="cell4" class="cell"></button>
+                <button id="cell5" class="cell"></button>
+                <button id="cell6" class="cell"></button>
+            </div>
+            <div class="row">
+                <button id="cell7" class="cell"></button>
+                <button id="cell8" class="cell"></button>
+                <button id="cell9" class="cell"></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const socket = io();
+
+        let playerName;
+        document.getElementById("find").addEventListener("click", function () {
+            playerName = document.getElementById("name").value;
+            document.getElementById("user").innerText = playerName;
+
+            if (!playerName) {
+                alert("Enter your name!");
+            } else {
+                socket.emit("find game", { name: playerName });
+
+                document.getElementById("loading").style.display = "block";
+                document.getElementById("find").disabled = true;
+            }
+        });
+
+        socket.on("find", (data) => {
+            let allPlayersArray = data.allPlayers;
+
+            document.getElementById("userCont").style.display = "block";
+            document.getElementById("oppCont").style.display = "block";
+            document.getElementById("value").style.display = "block";
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("name").style.display = "none";
+            document.getElementById("find").style.display = "none";
+            document.getElementById("enterName").style.display = "none";
+            document.getElementById("bigCont").style.display = "block";
+            document.getElementById("turn").style.display = "block";
+            document.getElementById("turn").innerText = "X's turn";
+
+            let opponentName;
+            let playerValue;
+
+            const foundObj = allPlayersArray.find(obj => obj.p1.player1Name === playerName || obj.p2.player2Name === playerName);
+
+            foundObj.p1.player1Name === playerName ? opponentName = foundObj.p2.player2Name : opponentName = foundObj.p1.player1Name;
+            foundObj.p1.player1Name === playerName ? playerValue = foundObj.p2.player2Value : playerValue = foundObj.p1.player1Value;
+
+            document.getElementById("opp").innerText = opponentName;
+            document.getElementById("value").innerText = playerValue;
+        });
+
+        document.querySelectorAll(".cell").forEach(cell => {
+            cell.addEventListener("click", function () {
+                let value = document.getElementById("value").innerText;
+                cell.innerText = value;
+
+                socket.emit("playing", { value: value, id: cell.id, name: playerName });
+            });
+        });
+
+        socket.on("playing", (data) => {
+            const game = data.allPlayers.find(obj => obj.p1.player1Name === playerName || obj.p2.player2Name === playerName);
+           
+            const p1id = game.p1.move1;
+            const p2id = game.p2.move2;
+
+            if ((game.sum) % 2 === 0) {
+                document.getElementById("turn").innerText = "O's turn";
+            } else {
+                document.getElementById("turn").innerText = "X's turn";
+            }
+            if (p1id !== '') {
+                document.getElementById(p1id).innerText = "X";
+                document.getElementById(p1id).disabled = true;
+                document.getElementById(p1id).style.color = "black";
+            }
+            if (p2id !== '') {
+                document.getElementById(p2id).innerText = "O";
+                document.getElementById(p2id).disabled = true;
+                document.getElementById(p2id).style.color = "black";
+            }
+        });
+    </script>
+</body>
+</html>
