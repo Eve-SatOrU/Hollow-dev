@@ -1,7 +1,7 @@
 # Challenge Document
 
 - Team Name: **Gotei 4**
-- Challenge Name : **Mantis Lords**
+- Challenge Name : **Challenge 3 ( Mantis Lords )**
 
 - What is the percentage of the challenge you have completed? **50%**
 
@@ -17,6 +17,8 @@
 
 - Did you complete any bonus points? **No**
 
-### What did you implement extra?
+- What did you implement extra?
+
+### Extra
 
 - nothing really
