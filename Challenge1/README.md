@@ -1,7 +1,7 @@
 # Challenge Document
 
-- Team Name: **gotei 4**
-- Challenge Name : **False Knight**
+- Team Name: **Gotei 4**
+- Challenge Name : **Challenge 1 False Knight**
 
 - What is the percentage of the challenge you have completed? **100%**
 
@@ -16,10 +16,10 @@
 - Requirement 5 (100%)
 - Requirement 6 (100%)
 
-- Did you complete any bonus points? **yes **
+- Did you complete any bonus points? **yes**
 
 - What did you implement extra?
 
 ### Extra
 
-nothing extra
+- nothing extra
