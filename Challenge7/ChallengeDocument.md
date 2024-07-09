@@ -1,7 +1,7 @@
 # Challenge Document
 
 - Team Name: **Gotei 4**
-- Challenge Name : **Nightmare King Grimm**
+- Challenge Name : **Challenge 7 ( Nightmare King Grimm )**
 
 - What is the percentage of the challenge you have completed? **100%**
 
