@@ -1,6 +1,6 @@
 # Challenge Document
 
-- Team Name: **GOTEI -4**
+- Team Name: **GOTEI 4**
 - Challenge Name : **the radiance**
 
 - What is the percentage of the challenge you have completed? **30%**
@@ -21,4 +21,5 @@
 - What did you implement extra?
 
 ### Extra
-nothing extra
+
+- nothing extra
