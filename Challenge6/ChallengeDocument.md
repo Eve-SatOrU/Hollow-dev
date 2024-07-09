@@ -1,7 +1,7 @@
 # Challenge Document
 
 - Team Name: **Gotei 4**
-- Challenge Name : **Traitor Lords**
+- Challenge Name : **Challenge 6 ( Traitor Lords )**
 
 - What is the percentage of the challenge you have completed? **40%**
 
