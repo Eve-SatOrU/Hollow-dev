@@ -30,7 +30,7 @@
 
 - Challenge Name : **Challenge 3 (mantis lord)**
 - Git Repository Link: https://github.com/Eve-SatOrU/Hollow-dev/tree/main/Challenge3
-- Previw Video Link : 
+- Previw Video Link : https://drive.google.com/drive/folders/1HSUvD4CCWzuoYzJfeFJgYfztMDFkKvSP?usp=sharing
 
 
 ## Challenge
