@@ -1,0 +1,35 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  username  String     @unique
+  password  String
+  role      String     @default("user")
+  Vote      Vote[]
+  Candidate Candidate?
+}
+
+model Candidate {
+  id     Int    @id @default(autoincrement())
+  userId Int    @unique
+  user   User   @relation(fields: [userId], references: [id])
+  name   String
+  Vote   Vote[]
+}
+
+model Vote {
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  candidateId Int
+  user        User      @relation(fields: [userId], references: [id])
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+
+  @@unique([userId, candidateId]) // Ensure a user can only vote once per candidate
+}

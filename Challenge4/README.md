@@ -1,6 +1,6 @@
 # Challenge Document
 
-- Team Name: **Team 1**
+- Team Name: **Gotei 4**
 - Challenge Name : **Watcher Knight**
 
 - What is the percentage of the challenge you have completed? **100%**
@@ -22,4 +22,4 @@
 
 ### Extra
 
-- I added an authentication system to the application.
+- I added an security staff like hashing , anti ddos attack , helmet also swaggerui.

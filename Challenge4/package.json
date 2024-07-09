@@ -1,0 +1,33 @@
+{
+  "name": "votingsystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "toumi meriem",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.16.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.10.2",
+    "nodemon": "^3.1.4",
+    "prisma": "^5.16.1",
+    "pug": "^3.0.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "web3": "^4.10.0",
+    "winston": "^3.13.0",
+    "yamljs": "^0.3.0"
+  }
+}

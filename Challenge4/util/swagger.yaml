@@ -1,0 +1,124 @@
+openapi: 3.0.0
+info:
+  title: Voting System API
+  version: 1.0.0
+  description: API documentation for the Voting System application
+servers:
+  - url: http://localhost:3000
+    description: Development server
+tags:
+  - name: Users
+    description: User management and authentication
+  - name: Votes
+    description: Voting operations
+  - name: Candidates
+    description: Candidate management
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+paths:
+  /users/register:
+    post:
+      summary: Register a new user
+      tags: [Users]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+                - role
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+                role:
+                  type: string
+                  enum: [admin, user]
+      responses:
+        '201':
+          description: The user was successfully created
+        '500':
+          description: Internal server error
+  /users/login:
+    post:
+      summary: Log in a user
+      tags: [Users]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+        '401':
+          description: Invalid password
+        '404':
+          description: User not found
+        '500':
+          description: Internal server error
+  /votes:
+    post:
+      summary: Cast a vote
+      tags: [Votes]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - candidateId
+              properties:
+                candidateId:
+                  type: integer
+      responses:
+        '201':
+          description: Vote cast successfully
+        '400':
+          description: You have already voted
+        '500':
+          description: Internal server error
+  /candidates/add:
+    post:
+      summary: Add a new candidate
+      tags: [Candidates]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+      responses:
+        '201':
+          description: The candidate was successfully created
+        '403':
+          description: Access denied
+        '500':
+          description: Internal server error
