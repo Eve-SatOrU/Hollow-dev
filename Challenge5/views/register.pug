@@ -1,0 +1,67 @@
+//- register
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        //- style
+        style.
+            body {
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                color: #333;
+            }
+            h2 {
+                color: #666;
+            }
+            div#metrics {
+                margin-bottom: 20px;
+            }
+            div#directory-content {
+                margin-bottom: 20px;
+            }
+            form input[type="text"] {
+                padding: 5px;
+                margin-right: 10px;
+            }
+            form button {
+                padding: 5px 10px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+            }
+            li:last-child {
+                border-bottom: none;
+            }
+    body 
+            form(action="/register", method="POST")
+              tr
+                th  userName
+                td
+                  label(for="userName")
+                  input.box(type="text", name="userName", placeholder="Type your Full Name", required)#userName
+                tr
+                th Email
+                td 
+                  label(for="email") 
+                  input.box(type="email", name="email", placeholder="Type your email", required)#email
+                tr
+                th userPassword
+                td 
+                  label(for="userPassword") 
+                  input.box(type="password", name="userPassword", placeholder="Type your password", required)#userPassword
+                tr
+                th
+                td
+                  button.btn(type="submit") Create

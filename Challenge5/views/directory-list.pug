@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title Directory Listing
+    link(rel="stylesheet", href="/styles.css")
+  body
+    h1 Directory Listing
+    form(action="/directory/list", method="get")
+      input(type="text", name="path", placeholder="Enter directory path", value=(path || '/'))
+      button(type="submit") List Directory
+
+    if error
+      p.error= error
+
+    if files
+      ul
+        each file in files
+          li
+            if file.isDirectory
+              strong= file.name
+              span( Directory )
+            else
+              = file.name
+              span( File - #{file.size} bytes )
+            p Last Modified: #{file.lastModified}
+
+    h2 Create New Directory
+    form(action="/directory/create", method="post")
+      input(type="text", name="path", placeholder="Enter new directory path")
+      button(type="submit") Create Directory
+
+    if message
+      p.message= message
+
+    if createError
+      p.error= createError

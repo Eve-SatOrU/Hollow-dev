@@ -1,0 +1,209 @@
+//- meta(charset="UTF-8")
+//- // Page Title
+//- title AgrNex
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     //- style 
+//-     style.
+//-       body {
+//-         font-family: Arial, sans-serif;
+//-       }
+//-       h1 {
+//-         color: #333;
+//-       }
+//-       h2 {
+//-         color: #666;
+//-       }
+//-       div#metrics {
+//-         margin-bottom: 20px;
+//-       }
+//-       div#directory-content {
+//-         margin-bottom: 20px;
+//-       }
+//-       form input[type="text"] {
+//-         padding: 5px;
+//-         margin-right: 10px;
+//-       }
+//-       form button {
+//-         padding: 5px 10px;
+//-         background-color: #333;
+//-         color: #fff;
+//-         border: none;
+//-         cursor: pointer;
+//-       }
+//-       ul {
+//-         list-style-type: none;
+//-         padding: 0;
+//-       }
+//-       li {
+//-         padding: 5px;
+//-         border-bottom: 1px solid #ccc;
+//-       }
+//-       li:last-child {
+//-         border-bottom: none;
+//-       }
+      
+//-   body 
+//-     h1 Dashboard
+//-     h2 CPU and Memory Usage
+//-     div#metrics
+//-       p Loading metrics...
+//-     h2 Directory Explorer
+//-     form(method='GET', action='/directory/list')
+//-       input(type='text', name='path', placeholder='/path/to/directory')
+//-       button(type='submit') List Directory
+//-     div#directory-content
+
+//-     h2 Services Management
+//-     form#start-service(method='POST', action='/services/start')
+//-       input(type='text', name='serviceName', placeholder='Service Name')
+//-       button(type='submit') Start Service
+//-     form#stop-service(method='POST', action='/services/stop')
+//-       input(type='text', name='serviceName', placeholder='Service Name')
+//-       button(type='submit') Stop Service
+//-     div#services-content
+
+//-     script.
+//-       document.addEventListener('DOMContentLoaded', function() {
+//-         fetch('/metrics')
+//-           .then(response => response.json())
+//-           .then(data => {
+//-             const metricsDiv = document.getElementById('metrics');
+//-             metricsDiv.innerHTML = `
+//-               <p>CPU Load Average (1 min): ${data.cpuUsage}</p>
+//-               <p>Total Memory: ${data.totalMemory} bytes</p>
+//-               <p>Used Memory: ${data.usedMemory} bytes</p>
+//-               <p>Free Memory: ${data.freeMemory} bytes</p>
+//-             `;
+//-           });
+
+//-         document.querySelector('form[action="/directory/list"]').addEventListener('submit', function(event) {
+//-           event.preventDefault();
+//-           const path = this.path.value;
+//-           fetch(`/directory/list?path=${encodeURIComponent(path)}`)
+//-             .then(response => response.json())
+//-             .then(data => {
+//-               const directoryContentDiv = document.getElementById('directory-content');
+//-               directoryContentDiv.innerHTML = `
+//-                 <ul>
+//-                   ${data.map(file => `<li>${file.name} - ${file.isDirectory ? 'Directory' : 'File'} - ${file.size} bytes</li>`).join('')}
+//-                 </ul>
+//-               `;
+//-             });
+//-         });
+
+//-         document.getElementById('start-service').addEventListener('submit', function(event) {
+//-           event.preventDefault();
+//-           const serviceName = this.serviceName.value;
+//-           fetch('/services/start', {
+//-             method: 'POST',
+//-             headers: { 'Content-Type': 'application/json' },
+//-             body: JSON.stringify({ serviceName })
+//-           })
+//-           .then(response => response.json())
+//-           .then(data => {
+//-             alert(data.message);
+//-           });
+//-         });
+
+//-         document.getElementById('stop-service').addEventListener('submit', function(event) {
+//-           event.preventDefault();
+//-           const serviceName = this.serviceName.value;
+//-           fetch('/services/stop', {
+//-             method: 'POST',
+//-             headers: { 'Content-Type': 'application/json' },
+//-             body: JSON.stringify({ serviceName })
+//-           })
+//-           .then(response => response.json())
+//-           .then(data => {
+//-             alert(data.message);
+//-           });
+//-         });
+//-       });
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    h1 Dashboard
+    h2 CPU and Memory Usage
+    div#metrics
+      p Loading metrics...
+    h2 Directory Explorer
+    form(method='GET', action='/directory/list')
+      input(type='text', name='path', placeholder='/path/to/directory')
+      button(type='submit') List Directory
+    div#directory-content
+
+    h2 Services Management
+    form#start-service(method='POST', action='/services/start')
+      input(type='text', name='serviceName', placeholder='Service Name')
+      button(type='submit') Start Service
+    form#stop-service(method='POST', action='/services/stop')
+      input(type='text', name='serviceName', placeholder='Service Name')
+      button(type='submit') Stop Service
+    div#services-content
+
+    script.
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('/metrics')
+          .then(response => response.json())
+          .then(data => {
+            const metricsDiv = document.getElementById('metrics');
+            metricsDiv.innerHTML = `
+              <p>CPU Usage: ${data.cpuUsage}%</p>
+              <p>Total Memory: ${data.totalMemory} GB</p>
+              <p>Used Memory: ${data.usedMemory} GB</p>
+              <p>Free Memory: ${data.freeMemory} GB</p>
+            `;
+          });
+
+        document.querySelector('form[action="/directory/list"]').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const path = this.path.value;
+          fetch(`/directory/list?path=${encodeURIComponent(path)}`)
+            .then(response => response.json())
+            .then(data => {
+              const directoryContentDiv = document.getElementById('directory-content');
+              directoryContentDiv.innerHTML = `
+                <ul>
+                  ${data.map(file => `<li>${file.name} - ${file.isDirectory ? 'Directory' : 'File'} - ${file.size} bytes</li>`).join('')}
+                </ul>
+              `;
+            });
+        });
+
+        document.getElementById('start-service').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const serviceName = this.serviceName.value;
+          fetch('/services/start', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ serviceName })
+          })
+          .then(response => response.json())
+          .then(data => {
+            alert(data.message);
+          });
+        });
+
+        document.getElementById('stop-service').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const serviceName = this.serviceName.value;
+          fetch('/services/stop', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ serviceName })
+          })
+          .then(response => response.json())
+          .then(data => {
+            alert(data.message);
+          });
+        });
+      });

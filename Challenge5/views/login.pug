@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    //- style
+    style.
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333;
+      }
+      h2 {
+        color: #666;
+      }
+      div#metrics {
+        margin-bottom: 20px;
+      }
+      div#directory-content {
+        margin-bottom: 20px;
+      }
+      form input[type="text"] {
+        padding: 5px;
+        margin-right: 10px;
+      }
+      form button {
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 5px;
+        border-bottom: 1px solid #ccc;
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+  body 
+    form(action="/login", method="post") 
+      .form-group
+        .from-register 
+          if error
+              .red
+              .alert.alert-danger= error
+        label Email Address
+        input.au-input.au-input--full(type="email", name="email", placeholder="Email")#email
+      .form-group
+        label Password
+        input.au-input.au-input--full(type="password", name="userPassword", placeholder="Password")#userPassword
+      .login-checkbox
+        label
+          input(type="checkbox", name="remember")
+          | Remember Me
+
+        label
+          a(href="/offer2/forgot-password") Forgotten Password?
+      button.au-btn.au-btn--block.au-btn--green.m-b-20(type="submit") Login
