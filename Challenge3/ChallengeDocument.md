@@ -19,6 +19,4 @@
 
 - What did you implement extra?
 
-### nothing really
-
-### recording : https://drive.google.com/drive/folders/1HSUvD4CCWzuoYzJfeFJgYfztMDFkKvSP?usp=sharing
+- nothing really
