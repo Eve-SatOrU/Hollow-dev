@@ -17,6 +17,6 @@
 
 - Did you complete any bonus points? **No**
 
-- What did you implement extra?
+### What did you implement extra?
 
-  nothing really
+- nothing really
