@@ -1,6 +1,6 @@
 # Challenge Document
 
-- Team Name: **Gotei 4*
+- Team Name: **Gotei 4**
 - Challenge Name : **Mantis Lords**
 
 - What is the percentage of the challenge you have completed? **50%**
